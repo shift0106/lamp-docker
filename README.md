@@ -14,10 +14,10 @@ By default, Supervisor listens on 127.0.0.1:9001, using authentication to connec
 
 # Usage
 You can create a docker container with this image like this(I suppose your web application placed in /srv/docker-example/www):
-docker run -d -v /srv/docker-example/www:/data/www -P -–name=“your-lamp-docker-container-name” qiulinwang/lamp
+docker run -d -v /srv/docker-example/www:/data/www -P -–name=“your-lamp-docker-container-name” qiulinwang/lamp-docker
 
 If you want to control every servers configuration, then you should create your docker container like this:
-docker run -d -v /srv/docker-example/www:/data/www -v /srv/docker-example/conf/apache2:/etc/apache2 -v /srv/docker-example/conf/php5:/etc/php5 -v /srv/docker-example/conf/mysql:/etc/mysql -P -–name=“your-lamp-docker-container-name” qiulinwang/lamp
+docker run -d -v /srv/docker-example/www:/data/www -v /srv/docker-example/conf/apache2:/etc/apache2 -v /srv/docker-example/conf/php5:/etc/php5 -v /srv/docker-example/conf/mysql:/etc/mysql -P -–name=“your-lamp-docker-container-name” qiulinwang/lamp-docker
 note:I suppose you placed your apache/php/mysql configuration files in /srv/docker-example/conf/apache2, /srv/docker-example/conf/php5, and /srv/docker-example/conf/mysql, and your application sources in /srv/docker-example/www.
 
 If you want to inspect server logs, then you can achieve this the following way:
